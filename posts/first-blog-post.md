@@ -1,10 +1,29 @@
 ---
-title: This is a blog post!
+title: My introduction to creative coding as a noob! 
 published_at: 2022-11-04
-snippet: An example of a blog post.
+snippet: 1.1 Homework and Notes
 disable_html_sanitization: true
 allow_math: true
 ---
+# My introduction to creative coding as a noob 
+
+
+
+## Transcription of nots from the 5th of March 2025 
+
+.md means "markdown" (markdown syntax)
+at the top of markdown code is what you call, front matter 
+front matter is used to identify meta data 
+metadata: describes data such as format 
+
+p5.js functions:
+
+define a 'setup ()' function 
+
+setup () function only runs 1x
+draw () function only runs after the setup function and loops 
+
+defining functions 
 
 # This is h1
 
