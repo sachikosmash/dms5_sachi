@@ -1,5 +1,5 @@
 ---
-title: My introduction to creative coding as a noob
+title: Aesthetic Registers and Kindred Spirits
 published_at: 2025-03-05
 snippet: Creative coding notes and blog
 allow math: true

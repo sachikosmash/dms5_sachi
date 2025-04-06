@@ -1,6 +1,6 @@
 ---
 title: My introduction to creative coding as a noob! 
-published_at: 2022-11-04
+published_at: 2025-04-04
 snippet: 1.1 Homework and Notes
 disable_html_sanitization: true
 allow_math: true
