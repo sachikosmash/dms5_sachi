@@ -56,6 +56,51 @@ Then, using mouse click functions, must likely hovering, whilst assigning colour
 to replicate this, I will need to setup the canvas and the grid system, learn how to draw rectangles using p5.js and get comfortable with using loops and arrays. 
 
 Animation would be used by applying frame rate control. 
+
+<iframe id="interactive_sq" src="https://editor.p5js.org/vubblechi/full/YzQ_oPBBl"></iframe>
+
+<script type="module">
+
+    const iframe  = document.getElementById (`static_squares`)
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
+
+</script>
+
+//hover onto canvas to interact
+
+// setting up grids as a global variable
+let cols = 10; 
+let rows = 10;
+let blockSize;
+let colors = []; //empty array for colour random
+
+function setup() {
+  createCanvas(400, 400);
+  blockSize = width / cols;
+  for (let i = 0; i < cols * rows; i++) {
+    colors.push(color(random(255), random(255), random(255)));
+  }
+}
+
+function draw() {
+  background(0);
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < cols; x++) {
+      let index = x + y * cols;
+      let blockX = x * blockSize;
+      let blockY = y * blockSize;
+      
+      if (mouseX > blockX && mouseX < blockX + blockSize && 
+          mouseY > blockY && mouseY < blockY + blockSize) {
+        colors[index] = color(random(255), random(255), random(255));
+      }
+      
+      fill(colors[index]);
+      rect(blockX, blockY, blockSize, blockSize);
+    }
+  }
+
 # This is h1
 
 ![a drippy lemon](logo.svg)
