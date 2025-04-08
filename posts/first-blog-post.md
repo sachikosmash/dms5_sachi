@@ -7,7 +7,44 @@ allow_math: true
 ---
 # My introduction to creative coding as a noob 
 
+My first attempt at making a grid:
 
+<iframe id="static_squares" src="https://editor.p5js.org/vubblechi/full/Dy6k23zZT"></iframe>
+
+<script type="module">
+
+    const iframe  = document.getElementById (`static_squares`)
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
+
+</script>
+
+I realised that I can just repeat the code to create the stacking effect:
+
+<iframe id="moving_squares" src="https://editor.p5js.org/vubblechi/full/gsVp-UMu8"></iframe>
+
+<script type="module">
+
+    const iframe  = document.getElementById (`static_squares`)
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
+
+</script>
+
+
+
+
+
+
+<iframe id="static_squares" src="https://editor.p5js.org/vubblechi/full/Dy6k23zZT"></iframe>
+
+<script type="module">
+
+    const iframe  = document.getElementById (`static_squares`)
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
+
+</script>
 
 ## Transcription of nots from the 5th of March 2025 
 
