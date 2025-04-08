@@ -40,9 +40,11 @@ Large Language Models -> progression in Ai.
 - Threat of emotional bonding with AI
 - blurring the lines between real and artificial. 
 
-## How to make something cute in the context of my project. Cute and friendly spirits. 
+## How to make something cute in the context of my design project. Cute and friendly spirits. 
 
+- How to make cute visuals: to create a design of approachability, design elements such as sqape and line must be used in a way that is not too prominent a bold. For instance, thick black lines can appear daunting. Therefore, I will remove strokes or shape outlines in my project. 
 
+- 
 
 
 ## Transcription of notes from the 5th of March 2025 
