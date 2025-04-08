@@ -31,21 +31,6 @@ I realised that I can just repeat the code to create the stacking effect:
 
 </script>
 
-
-
-
-
-
-<iframe id="static_squares" src="https://editor.p5js.org/vubblechi/full/Dy6k23zZT"></iframe>
-
-<script type="module">
-
-    const iframe  = document.getElementById (`static_squares`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16 + 42
-
-</script>
-
 ## Transcription of nots from the 5th of March 2025 
 
 .md means "markdown" (markdown syntax)
@@ -60,8 +45,17 @@ define a 'setup ()' function
 setup () function only runs 1x
 draw () function only runs after the setup function and loops 
 
-defining functions 
+# Rafaël Rozendaal
 
+i realised that the blocks change colors and positions in response to user interactions. 
+
+It was probably done by dividing the canvas  into a grid where each cell represents a block. Each block would have dimensions based on the canvas size  and number of rows and columns.
+
+Then, using mouse click functions, must likely hovering, whilst assigning colours for each box. It seems to be generated randomly. 
+
+to replicate this, I will need to setup the canvas and the grid system, learn how to draw rectangles using p5.js and get comfortable with using loops and arrays. 
+
+Animation would be used by applying frame rate control. 
 # This is h1
 
 ![a drippy lemon](logo.svg)
