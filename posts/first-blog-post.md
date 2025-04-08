@@ -97,7 +97,7 @@ function draw() {
       }
       
       fill(colors[index]);
-      rect(blockX, blockY, blockSize, blockSize);
+      rect(blockX, blockY, blockSize, blockSize); //rectangle block
     }
   }
 
