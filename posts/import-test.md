@@ -31,7 +31,7 @@ const scene = new THREE.Scene();
 		</script>
 
 <script type="module">
-    import * as THREE from "../3jdasset/three.module.js"
+    import * as THREE from "../3jdasset/three.js"
 
     console.log (THREE)
 
