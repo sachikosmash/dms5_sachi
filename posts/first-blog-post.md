@@ -1,192 +1,77 @@
 ---
-title: My introduction to creative coding as a noob! 
-published_at: 2025-04-04
-snippet: 1.1 Homework and Notes
+title: Aesthetic Registers and Kindred Spirits
+published_at: 2025-03-05
+snippet: Creative coding notes and blog
+allow math: true
 disable_html_sanitization: true
-allow_math: true
 ---
-# My introduction to creative coding as a noob 
 
-My first attempt at making a grid:
+# What is cute?
 
-<iframe id="static_squares" src="https://editor.p5js.org/vubblechi/full/Dy6k23zZT"></iframe>
+Aesthetic judgements is done through factors that create perception.
+Therefore Aesthetic registers is how the perception of something is categorised. For instance, culturem genre and subjective affects (emotions).
+The opposite of cute could be zany, chaotic or uncanny.
 
-<script type="module">
+I found tha aesthetic registers are percieved criteras that aim to distingish perceieved experiences.
 
-    const iframe  = document.getElementById (`static_squares`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16 + 42
+## So..... what is cute???
 
-</script>
+- Approachable
+- Non threateniong
+- Creates excitemennt - playful
+- Sounds fluid, or higher pitches
+- Vulnerable
 
-I realised that I can just repeat the code to create the stacking effect:
+Cute can be powerful. And influence through ideas such as soft power.
 
-<iframe id="moving_squares" src="https://editor.p5js.org/vubblechi/full/gsVp-UMu8"></iframe>
+Cute -> POwer
 
-<script type="module">
+Vulnerable - Prone to attacks -> cute -> influience -> become popular -> thus approachable -> percieved as -> positive -> playful.
 
-    const iframe  = document.getElementById (`static_squares`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16 + 42
+"affordances in aesthetic registers"
+How the perception of something is categories and the affect (emotional) consequence.
 
-</script>
+Thus, add cute register and platform capitalism (e.g. marketing) can scale across relatability, shareability and expression.
 
-## Transcription of nots from the 5th of March 2025 
+For voices (e.g., Alexa) -> AI helper are default to female
+
+- Humanising computers for branding create approachble power
+
+Large Language Models -> progression in Ai.
+
+- Threat of emotional bonding with AI
+- blurring the lines between real and artificial.
+
+## How to make something cute in the context of my design project. Cute and friendly spirits.
+
+- How to make cute visuals: to create a design of approachability, design elements such as sqape and line must be used in a way that is not too prominent a bold. For instance, thick black lines can appear daunting. Therefore, I will remove strokes or shape outlines in my project.
+
+# Creating the Cute
+
+1. How well did you achieve cuteness in the visual, sonic, and interactive domains?
+
+I aimed to achieve cuteness through a consistent and playful aesthetic across visuals, sound, and interaction. Visually, I used soft colour palettes, rounded shapes, and gentle animations to convey a sense of charm and friendliness. In the sonic domain, I incorporated light, whimsical sound effects and upbeat background music to match the playful tone. Interactivity was designed to feel rewarding and joyful, with smooth transitions and delightful microinteractions—like a subtle bounce or sparkle when buttons are clicked. While there's always room for polish, I feel I successfully created a cohesive "cute" experience that invites engagement and makes people smile.
+
+2. What communities and learning resources did you draw on to do the bulk of your learning for this project?
+
+I relied heavily on online communities like Stack Overflow, Reddit, and Dev.to for troubleshooting and advice. I also watched tutorials on YouTube (e.g. The Coding Train and Kevin Powell), and followed some interactive lessons on platforms like FreeCodeCamp and W3Schools for quick refreshers. GitHub was helpful too—seeing how others approached cute UI or gamified interactions gave me a lot of inspiration.
+
+3. What aspects have you enjoyed the most about this process? What have you found to be most surprising?
+
+I really enjoyed the visual design aspect—bringing characters or elements to life with colour and animation was satisfying and fun. It felt like crafting a tiny, interactive world. What surprised me most was how much subtle changes—like easing timing or colour hue—impacted the overall "feel" of the experience. Making something cute isn't just about visuals; it’s about how everything works together to create a mood.
+
+4. What aspects have you struggled with the most? What have you found the most confusing?
+
+The biggest struggle was getting the interactions to feel right—especially making them responsive and smooth across different devices and browsers. I also found it confusing at times to balance cuteness with usability; sometimes overly cute elements risked making the UI less clear. Debugging animations and audio sync issues was another challenge—especially when mixing JavaScript with CSS animations or audio triggers.
+
+## Transcription of notes from the 5th of March 2025
 
 .md means "markdown" (markdown syntax)
-at the top of markdown code is what you call, front matter 
-front matter is used to identify meta data 
-metadata: describes data such as format 
+at the top of markdown code is what you call, front matter
+front matter is used to identify meta data
+metadata: describes data such as format
 
-p5.js functions:
+interpretation javascript -> runtime (e.g. browser, denode)
 
-define a 'setup ()' function 
-
-setup () function only runs 1x
-draw () function only runs after the setup function and loops 
-
-# Rafaël Rozendaal
-
-i realised that the blocks change colors and positions in response to user interactions. 
-
-It was probably done by dividing the canvas  into a grid where each cell represents a block. Each block would have dimensions based on the canvas size  and number of rows and columns.
-
-Then, using mouse click functions, must likely hovering, whilst assigning colours for each box. It seems to be generated randomly. 
-
-to replicate this, I will need to setup the canvas and the grid system, learn how to draw rectangles using p5.js and get comfortable with using loops and arrays. 
-
-Animation would be used by applying frame rate control. 
-
-<iframe id="interactive_sq" src="https://editor.p5js.org/vubblechi/full/YzQ_oPBBl"></iframe>
-
-<script type="module">
-
-    const iframe  = document.getElementById (`static_squares`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16 + 42
-
-</script>
-
-//hover onto canvas to interact
-
-// setting up grids as a global variable
-let cols = 10; 
-let rows = 10;
-let blockSize;
-let colors = []; //empty array for colour random
-
-function setup() {
-  createCanvas(400, 400);
-  blockSize = width / cols;
-  for (let i = 0; i < cols * rows; i++) {
-    colors.push(color(random(255), random(255), random(255)));
-  }
-}
-
-function draw() {
-  background(0);
-  for (let y = 0; y < rows; y++) {
-    for (let x = 0; x < cols; x++) {
-      let index = x + y * cols;
-      let blockX = x * blockSize;
-      let blockY = y * blockSize;
-      
-      if (mouseX > blockX && mouseX < blockX + blockSize && 
-          mouseY > blockY && mouseY < blockY + blockSize) {
-        colors[index] = color(random(255), random(255), random(255));
-      }
-      
-      fill(colors[index]);
-      rect(blockX, blockY, blockSize, blockSize); //rectangle block
-    }
-  }
-
-# This is h1
-
-![a drippy lemon](logo.svg)
-
-^ images are written like this: `![description](file_path/file_name.png)`
-
-## This is h2
-
-*This is italic.*[^1]
-
-[^1]: This is a footnote, *which can also be italic*.
-
-**This is bold.**
-
-Hyperlinks can be written like this: `[text](https://URL)`
-
-You can find a markdown cheat-sheet [here](https://www.markdownguide.org/cheat-sheet/).
-
-## Maths:
-
-... which can be written inline, like this: $\{ x, y, z \} \in \N$
-
-... or block, like this:
-
-$$ x^2 + y^2 = z^2 $$
-
-Visit [ $\KaTeX$ ](https://katex.org/docs/supported#fractions-and-binomials) for more information about writing maths.
-
-## Embedding video:
-
-<iframe id="coding_train_video" src="https://www.youtube.com/embed/rI_y2GAlQFM?si=RDgjkpunxk1mQzMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<script type="module">
-
-    console.log (`hello world! 🚀`)
-
-    const iframe  = document.getElementById (`coding_train_video`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16
-
-</script>
-
-## Embedding p5 sketches:
-
-<iframe id="falling_falling" src="https://editor.p5js.org/capogreco/full/Fkg05m7aA"></iframe>
-
-<script type="module">
-
-    const iframe  = document.getElementById (`falling_falling`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16 + 42
-
-</script>
-
-## Canvas API
-
-<canvas id="canvas_example"></canvas>
-
-<script type="module">
-    const cnv = document.getElementById (`canvas_example`)
-    cnv.width = cnv.parentNode.scrollWidth
-    cnv.height = cnv.width * 9 / 16
-
-    const ctx = cnv.getContext (`2d`)
-    const pos = {
-        x: -100,
-        y: cnv.height / 2 - 50
-    }
-    
-    function draw_frame () {
-        ctx.fillStyle = `turquoise`
-        ctx.fillRect (0, 0, cnv.width, cnv.height)
-
-        ctx.fillStyle = `hotpink`
-        ctx.fillRect (pos.x, pos.y, 100, 100)
-
-        pos.x += 2
-
-        if (pos.x > cnv.width) {
-            pos.x = -100
-        }
-
-        requestAnimationFrame (draw_frame)
-    }
-
-    draw_frame ()
-</script>
-
-
+processing - java
+p5 - javascript
